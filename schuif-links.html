@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <title>Menu</title>
+    <meta name="author" content="Pascal Kuiper">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="schuifmenu-links.css">
+    <style>
+    #toggleMenu:checked ~ main {
+      margin-left: 10em;
+
+    }
+    #toggleMenu:checked ~ main #toggleLabel::before {
+      content: '\2716'
+    }
+
+    #toggleLabel::before {
+      content: '\2630';
+      cursor: pointer;
+    }
+
+    nav {
+      position: fixed;
+    }
+
+    main {
+      position: absolute;
+      margin-left: 0;
+      transition: margin-left .6s cubic-bezier(.17,.67,.83,1.36);
+    }
+    </style>
+  </head>
+  <body lang="nl">
+
+    <!-- Navigatie menu -->
+    <input type="checkbox" id="toggleMenu">
+    <nav>
+      <h4>Menu</h4>
+      <ul>
+        <li>
+          <a href="schuif-links.html" class="actief">links schuift</a>
+        </li>
+        <li>
+          <a href="schuif-rechts.html">rechts schuift</a>
+        </li>
+        <li>
+          <a href="schuif-top.html">top schuift</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main body structuur -->
+
+    <main>
+      <label for="toggleMenu" id="toggleLabel"></label>
+      <h1>Japan</h1>
+      <p><img src="japan.jpg" alt="mt-fuji"></p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+      <div id="validatie">
+  			<a href="http://validator.w3.org/check?uri=referer" target="_blank">
+  				<img src="http://blog.boyet.com/blog/files/media/image/valid-html5-blue.png" alt="Valide HTML5"></a>
+  			<a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+  				<img src="http://jigsaw.w3.org/css-validator/images/vcss-blue.gif" alt="Valide CSS">
+  			</a>
+  		</div>
+    </main>
+  </body>
+</html>
